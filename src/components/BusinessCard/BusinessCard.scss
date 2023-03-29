@@ -1,0 +1,82 @@
+@import '../../styles/mixins';
+
+.business-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &__contact-item {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    grid-gap: 12px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+      color: #e28743;
+    }
+  }
+
+  &__toggle {
+    cursor: pointer;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 24px;
+    border-radius: 3px;
+    max-width: 400px;
+    width: 80%;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+  }
+
+  &__header-title {
+    padding: 0 12px;
+    border-left: 4px solid #e28743; 
+    color: #063970;
+    margin-bottom: 42px;
+    text-align: left;
+
+    p {
+      font-weight: 700;
+    }
+    h2,p {
+      margin: 0;
+    }
+
+    &--orange {
+      color: #e28743;
+    }
+  }
+
+  &__icon {
+    height: 24px;
+    width: 24px;
+  }
+
+}

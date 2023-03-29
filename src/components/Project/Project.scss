@@ -1,0 +1,103 @@
+@import '../../styles/mixins';
+
+.project {
+  transition: .2s;
+  outline: none;
+  border: none;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  min-width: 300px;
+  border: 1px solid black;
+  background-color: #fafafa;
+  box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  margin: 10px 3px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__left {
+    flex-basis: 100%;
+  }
+  &__right { 
+    flex-grow: 1;
+    padding: 5px;
+    flex-basis: 60%;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+  &__modal {
+    &-button {
+      margin-top: 30px;
+    }
+    &-close {
+      position: absolute;
+      top: 0%;
+      right: 5%;
+      padding: 5px;
+    }
+    &-subtitle { text-align: center }
+  }
+  &__tech { 
+    font-size: 1.5rem;
+    &-img { width: 25px; height: 25px }
+  }
+  &__carousel {
+    width: 100%;
+    &-item {
+      width: 100%;
+      height: 100%;
+    }
+    &-image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__tech { margin: 0 5px }
+  &__blurb { 
+    display: block;
+    margin: 5px 0; 
+    width: 100%; 
+  }
+  &__button {
+    background-color: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-right: 5px;
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: purple;
+    border: 1px solid purple;
+    color: white;
+    &:hover { background-color: unset; color: orange; border: 1px solid orange }
+    &--blue {
+      @extend .project__button;
+      color: purple;
+      border: 1px solid purple;
+      background-color: unset;
+    }
+    &--gray { 
+      @extend .project__button;
+      background-color: #afafaf;
+      color: #fafafa;
+      border: none;
+      &:hover {background-color: #afafaf; color: #fafafa; border: none}
+    }
+
+    &--charcoal {
+      @extend .project__button;
+      background-color: #333;
+    }
+  }
+}
+
+.carousel.carousel-slider {
+  height: 250px;
+}

@@ -1,0 +1,83 @@
+@keyframes moving {
+  from { transform: translateX(-100vw)}
+  to { transform: translateX(100vw) }
+}
+
+@keyframes rising {
+  from { transform: translateY(100vh) }
+  to { transform: translateY(0) }
+}
+
+@keyframes floating {
+  from, to {transform: translateY(0)}
+  50% {transform: translateY(-10px)}
+}
+
+@keyframes blink {
+  0%, 10% {height: auto}
+  5% {height: 1px}
+}
+
+@keyframes fadein {
+  from {filter: opacity(0)}
+  to {filter: opacity(1)}
+}
+
+@keyframes fadein2 {
+  from {filter: opacity(0)}
+  to {filter: opacity(0.5);}
+}
+
+@keyframes fill {
+  from {}
+  to { background-color: purple }
+}
+
+@keyframes fill2 {
+  from {}
+  to { background-color: lightgreen }
+}
+
+@keyframes fill3 {
+  from {}
+  to { background-color: lightblue }
+}
+
+@keyframes move {
+  from,to {transform: translate(-12.5%,-35%);}
+  25% {transform: translate(-15%,-30%);}
+  50% {transform: translate(-12%,-40%);}
+  75% {transform: translate(-5%,-25%);}
+}
+
+@keyframes move2 {
+  from,to {}
+  25% {transform: translate(10%, 10%);}
+  50% {transform: translate(-3%,5%);}
+  75% {transform: translate(-5%,3%);}
+}
+
+@keyframes move3 {
+  from,to {}
+  25% {transform: translate(-100px,-200px);}
+  50% {transform: translate(-75px, -175px);}
+  75% {transform: translate(-50px,-150px)}
+}
+
+@keyframes shake {
+  0% { transform: translateX(-5px) }
+  25% { transform: translateX(0px) }
+  50% { transform: translateX(5px) }
+  75% { transform: translateX(0px) }
+  100% { transform: translateX(-5px) }
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-20px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}

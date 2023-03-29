@@ -1,0 +1,99 @@
+@import './animations';
+
+// ANIMATIONS
+@mixin clouds {
+  animation-name: moving;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @content;
+}
+
+@mixin rising {
+  animation-name: rising;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@mixin floating {
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  @content;
+}
+
+@mixin flyby {
+  animation-name: moving;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@mixin getIntoView {
+  animation: rising 6s ease-out, floating 5s ease-in-out 6s infinite;
+}
+
+@mixin blink {
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@mixin fadeIn {
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  @content;
+}
+
+@mixin arrowBounce {
+  animation: fadein 1s ease-in-out forwards 4s, bounce 1s ease-in infinite 4.1s;
+}
+@mixin move {
+  animation-name: move;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation: move 10s linear infinite 3s, fadein2 2s forwards 1s, fill 3s forwards 3s;
+}
+
+@mixin move2 {
+  animation-name: move2;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation: move2 10s linear infinite 3s, fadein2 2s forwards 1s, fill2 3s forwards 3s;
+}
+
+@mixin move3 {
+  animation-name: move3;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation: move3 10s linear infinite 3s, fadein2 2s forwards 1s, fill3 3s forwards 3s;
+}
+
+@mixin shake {
+  animation-name: shake;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+// breakpoints
+
+@mixin tablet {
+  @media screen and (min-width: 768px){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px){
+    @content;
+  }
+}
+

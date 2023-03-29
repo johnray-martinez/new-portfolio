@@ -1,0 +1,198 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.text-center {
+  text-align: center;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.landing-page{
+  overflow: hidden;
+  background-color: $bg-color1;
+  color: $font-color1;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &__sky-space {
+    background: rgb(161,198,234);
+    background: linear-gradient(180deg, rgba(161,198,234,1) 0%, #009ffd);
+    height: 1500px;
+    width: 100vw;
+    position: relative;
+  }
+
+  &__sea-space {
+    background-color: #2a2a72;
+    height: 1500px;
+    width: 100vw;
+    position: relative;
+  }
+
+  &__sea {
+    background-color: #2a2a72;
+    background-image: linear-gradient(0deg, #2a2a72 0%, #009ffd 74%); 
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &__contact {
+    background-color: black;
+    background-image: linear-gradient(180deg, #2a2a72 0%, black 74%); 
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &__contact-container {
+    background-color: white;
+    max-width: 400px;
+    padding: 32px;
+  }
+
+  &__sea-fish { 
+    width: 150px; 
+    position: absolute;
+    top: 15%;
+    left: 51%;
+    z-index: 2;
+    height: 80px;
+    width: auto;
+
+    @include tablet {
+      height: 120px;
+    }
+
+    @include clouds;
+
+    &--2 {
+      @extend .landing-page__sea-fish;
+      top: 25%;
+      left: 25%;
+      transform: rotateY(180deg);
+    }
+
+    &--3 {
+      @extend .landing-page__sea-fish;
+      top: 45%;
+      left: 70%;
+    }
+
+    &--4 {
+      @extend .landing-page__sea-fish;
+      top: 65%;
+      left: 40%;
+    }
+
+    &--5 {
+      @extend .landing-page__sea-fish;
+      top: 85%;
+      left: 30%;
+    }
+  }
+  &__container {
+    position: relative;
+  }
+
+  &__contents {
+    display: flex;
+    grid-gap: 24px;
+    text-align: left;
+
+    & > *:hover {
+      color: #BE4D25;
+      cursor: pointer;
+    }
+  }
+  &__title{
+    @include getIntoView;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: -10%;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    &--name{
+      margin: -5px;
+    }
+  }
+  &__subtitle { color: $font-color2 }
+  &__bird {
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 50px;
+
+    &--left {
+      @extend .landing-page__bird;
+      top: 95px;
+      left: -138px;
+      transform: scaleX(-1);
+    }
+    &--right {
+      @extend .landing-page__bird;
+      left: 143px;
+      top: 55px;
+    }
+  }
+  &__rope {
+    position: relative;
+    top: 0;
+    width: 5px;
+    height: 30px;
+
+    &--left {
+      @extend .landing-page__rope;
+      top: 36px;
+      left: -125px;
+      transform: rotate(-30deg);
+    }
+    &--right {
+      @extend .landing-page__rope;
+      top: 10px;
+      left: 130px;
+      transform: rotate(30deg);
+    }
+  }
+  @include tablet {
+    &__title { &--name { font-size: 4rem } }
+    &__subtitle { font-size: 2rem }
+    &__rope {
+      &--left {
+        top: 50px;
+        left: -325px;
+      }
+      &--right {
+        top: 20px;
+        left: 339px;
+      }
+    }
+    &__bird { 
+      width: 75px;
+      &--left { 
+        top: 140px;
+        left: -340px;
+      }
+      &--right {  
+        top: 75px;
+        left: 352px;
+      }
+    }
+  }
+}
