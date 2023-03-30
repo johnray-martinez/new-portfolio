@@ -21,7 +21,7 @@ const BusinessCard = () => {
   }, [])
 
   return (<>
-    <a href='' className="business-card__toggle" onClick={openModal}>Contact</a>
+    <a href='#' className="business-card__toggle" onClick={openModal}>Contact</a>
     {isOpen ? <div className="business-card">
       <div onClick={closeModal} className="business-card__overlay"></div>
       <div className="business-card__content">
@@ -39,6 +39,7 @@ const BusinessCard = () => {
           </a>
           <a className="business-card__contact-item" 
             target="_blank"
+            rel="noreferrer"
             href="https://docs.google.com/document/d/1GufFLkE-u9PYio7KaJPro_9uryHJDTmPcNUTSaCTY20/edit?usp=sharing">
             <img alt="" className="business-card__icon" src={downloadIcon} />
             Resume
