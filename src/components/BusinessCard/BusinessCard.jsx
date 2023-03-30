@@ -21,7 +21,7 @@ const BusinessCard = () => {
   }, [])
 
   return (<>
-    <a className="business-card__toggle" onClick={openModal}>Contact</a>
+    <a href='' className="business-card__toggle" onClick={openModal}>Contact</a>
     {isOpen ? <div className="business-card">
       <div onClick={closeModal} className="business-card__overlay"></div>
       <div className="business-card__content">
@@ -31,20 +31,20 @@ const BusinessCard = () => {
         </div>
         <div className="business-card__contacts">
           <a className="business-card__contact-item" href="https://www.linkedin.com/in/john-ray-martinez/" rel="noreferrer" target="_blank">
-            <img className="business-card__icon" src={linkedInIcon} /> Linkedin
+            <img alt="" className="business-card__icon" src={linkedInIcon} /> Linkedin
           </a>
           <a className="business-card__contact-item" href="https://github.com/johnray-martinez" rel="noreferrer" target="_blank">
-            <img className="business-card__icon" src={githubIcon} />
+            <img alt="" className="business-card__icon" src={githubIcon} />
             Github
           </a>
           <a className="business-card__contact-item" 
             target="_blank"
             href="https://docs.google.com/document/d/1GufFLkE-u9PYio7KaJPro_9uryHJDTmPcNUTSaCTY20/edit?usp=sharing">
-            <img className="business-card__icon" src={downloadIcon} />
+            <img alt="" className="business-card__icon" src={downloadIcon} />
             Resume
           </a>
           <p className="business-card__contact-item" onClick={copyEmailToClipboard}>
-            <img className="business-card__icon" src={emailIcon} />
+            <img alt="" className="business-card__icon" src={emailIcon} />
             jrmartinez@gmail.com
           </p>
         </div>
