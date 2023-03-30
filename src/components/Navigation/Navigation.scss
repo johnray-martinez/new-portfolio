@@ -21,7 +21,7 @@
     background-color: transparent;
   }
 
-  > p, > a {
+  > p, > a, > button {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
@@ -30,6 +30,8 @@
     display: block;
     flex-grow: 1;
     padding: 24px;
+    font-weight: 700;
+    font-size: 16px;
 
     @include tablet {
       padding: 0;

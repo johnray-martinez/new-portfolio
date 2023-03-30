@@ -23,6 +23,9 @@
 
   &__toggle {
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
   &__overlay {
     position: absolute;

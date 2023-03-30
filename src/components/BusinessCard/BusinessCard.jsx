@@ -21,7 +21,7 @@ const BusinessCard = () => {
   }, [])
 
   return (<>
-    <a href='#' className="business-card__toggle" onClick={openModal}>Contact</a>
+    <button className="business-card__toggle" onClick={openModal}>Contact</button>
     {isOpen ? <div className="business-card">
       <div onClick={closeModal} className="business-card__overlay"></div>
       <div className="business-card__content">
