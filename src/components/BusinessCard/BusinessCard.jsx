@@ -37,16 +37,16 @@ const BusinessCard = () => {
             <img className="business-card__icon" src={githubIcon} />
             Github
           </a>
-          <p className="business-card__contact-item" onClick={copyEmailToClipboard}>
-            <img className="business-card__icon" src={emailIcon} />
-            jrmartinez@gmail.com
-          </p>
           <a className="business-card__contact-item" 
             target="_blank"
             href="https://docs.google.com/document/d/1GufFLkE-u9PYio7KaJPro_9uryHJDTmPcNUTSaCTY20/edit?usp=sharing">
             <img className="business-card__icon" src={downloadIcon} />
             Resume
           </a>
+          <p className="business-card__contact-item" onClick={copyEmailToClipboard}>
+            <img className="business-card__icon" src={emailIcon} />
+            jrmartinez@gmail.com
+          </p>
         </div>
       </div>
     </div> : null}

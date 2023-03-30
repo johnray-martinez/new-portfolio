@@ -1,20 +1,41 @@
+@import '../../styles/mixins.scss';
+
 .navigation {
   position: fixed;
-  top: 50%;
-  right: 14px;
   display: flex;
-  flex-direction: column;
   grid-gap: 24px;
   z-index: 10;
   text-align: right;
   font-weight: 700;
+  width: 100%;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+
+  @include tablet {
+    top: 70%;
+    right: 14px;
+    left: unset;
+    width: unset;
+    flex-direction: column;
+    background-color: transparent;
+  }
 
   > p, > a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    letter-spacing: 8px;
     transition: 0.3s;
+    text-align: center;
+    display: block;
+    flex-grow: 1;
+    padding: 24px;
+
+    @include tablet {
+      padding: 0;
+      flex-grow: 0;
+      letter-spacing: 8px;
+    }
 
     &:hover {
       color: #e28743
